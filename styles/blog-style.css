@@ -136,6 +136,9 @@ body {
   width: 75%;
   cursor: pointer;
 }
+.blog-stories {
+  background-color: #f41818;
+}
 .menu-option .btn {
   background: none;
   height: 34px;
@@ -151,6 +154,9 @@ body {
   border: none;
   font-weight: 600;
   font-size: 20px;
+}
+.blog-stories button {
+  color: white;
 }
 .menu-option:hover {
   background: #f41818;
