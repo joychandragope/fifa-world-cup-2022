@@ -15,6 +15,8 @@
   --button-background: #dd0000;
   --aside-background: #161616;
   --aside-button-background: #ffffff;
+  --blog-article-color: #161616;
+  --blog-font-icon-color: rgba(22, 22, 22, 0.7);
   --footer-background: #161616;
   --footer-color: #b9b9b9;
 }
@@ -25,6 +27,7 @@ body {
 
 /*============== Header Sections =====================*/
 .header-section {
+  height: 100vh;
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -32,16 +35,16 @@ body {
 }
 .header {
   width: 80%;
-  height: 80vh;
-  border: 2px solid black;
+  height: 84vh;
   display: flex;
   background-color: var(--header-background);
   border-radius: 30px;
 }
 .header-text {
+  height: 424px;
   width: 40%;
-  height: 100%;
-  margin: 111px 0;
+  margin-top: 125px;
+  margin-bottom: 97px;
   margin-left: 106px;
   display: flex;
   flex-direction: column;
@@ -57,26 +60,146 @@ body {
   font-size: 16px;
   color: var(--header-text-color);
 }
-.header-text a {
+
+.btn {
   margin-top: 20px;
   text-decoration: none;
-  border: 2px solid red;
   width: 187px;
   height: 56px;
   background-color: var(--button-background);
-  /* color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
-.header-button {
+.header-text button {
   color: white;
   background-color: var(--button-background);
   border: none;
   font-weight: 500;
   font-size: 20px;
+  cursor: pointer;
+}
+.fa-circle-play {
+  margin-left: 5px;
 }
 .header-image {
-  width: 60%;
   height: 100%;
+  width: 60%;
+  padding-left: 45px;
+}
+/*============ Animation Effect ============*/
+@keyframes sliding {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 200px;
+  }
+}
+.header-image img {
+  height: 100%;
+  position: relative;
+  animation: sliding 1s ease-out 0.5s infinite alternate;
+  animation-play-state: running;
+}
+/* ================Main Sections ===================*/
+/* ==================== Blog Articles ===========================*/
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  height: 100vh;
+}
+.main-content {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+}
+.navigation-bar {
+  width: 400px;
+  height: 312px;
+  background-color: var(--aside-background);
+  border-radius: 10px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.menu-option {
+  /* border: 2px solid red; */
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 75%;
+  cursor: pointer;
+}
+.menu-option .btn {
+  background: none;
+  height: 34px;
+  width: 100%;
+  transform: translate(-1px, -5px);
+}
+.menu-option button {
+  padding-bottom: 11px;
+  cursor: pointer;
+
+  background: none;
+  color: #161616;
+  border: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+.blogs {
+  width: 100%;
+  margin-left: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  /* margin-bottom: 130px; */
+}
+.blog {
+  width: 312px;
+  height: 355px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px 2px grey;
+}
+.blog-image {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.blog a {
+  width: 100px;
+  height: 32px;
+  color: #161616;
+}
+.blog-button {
+  width: 100px;
+  height: 32px;
+  margin: 20px 0 15px 20px;
+  color: #161616;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #161616;
+  border-radius: 5px;
+}
+.blog-article {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--blog-article-color);
+  margin: 0px 20px 20px 20px;
+}
+.blog-duration {
+  width: 143px;
+  height: 26px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 20px 20px;
+  color: var(--blog-font-icon-color);
 }
