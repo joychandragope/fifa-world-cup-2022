@@ -431,6 +431,7 @@ body {
     padding-top: 20px;
   }
   .Tab-button {
+    visibility: visible;
     position: relative;
     top: 140px;
     font-size: 20px;
@@ -440,7 +441,7 @@ body {
     cursor: pointer;
 
     width: 100%;
-    visibility: visible;
+
     transform: translateY(930px);
     width: 160px;
     margin-left: 274px;
@@ -450,6 +451,7 @@ body {
     color: #ffffff;
     border: none;
     border-radius: 5px;
+    border: 2px solid yellow;
   }
 
   .footer {
