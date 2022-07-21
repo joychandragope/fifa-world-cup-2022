@@ -32,16 +32,16 @@ body {
   margin-top: 50px;
 }
 .header {
-  width: 80%;
+  width: 90%;
   height: 84vh;
   display: flex;
   background-color: var(--header-background);
   border-radius: 30px;
 }
 .header-text {
-  height: 424px;
-  width: 40%;
-  margin-top: 125px;
+  height: 500px;
+  width: 60%;
+  margin-top: 70px;
   margin-bottom: 97px;
   margin-left: 106px;
   display: flex;
@@ -53,10 +53,11 @@ body {
   font-size: 70px;
   color: var(--header-text-color);
 }
-#header-description {
+.header p {
   font-weight: 400;
   font-size: 16px;
   color: var(--header-text-color);
+  line-height: 30px;
 }
 
 .btn {
@@ -221,6 +222,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 50px;
   width: 1320px;
+  margin-left: 150px;
 }
 .footer-info {
   display: flex;
