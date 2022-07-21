@@ -259,3 +259,230 @@ body {
   color: var(--footer-social-media);
   cursor: pointer;
 }
+
+/* ====================== Media Quary Responsive ================ */
+
+/* ======================== For Mobile Devices ============*/
+@media only screen and (max-width: 688px) {
+  .header-section {
+    width: 100%;
+    height: 100vh;
+  }
+  .header {
+    flex-direction: column;
+    position: absolute;
+    width: 88%;
+    left: 21px;
+    top: 36px;
+    height: 100vh;
+    right: 10;
+    align-items: center;
+  }
+  .header-text {
+    width: 66%;
+    height: 30%;
+    transform: translateX(-50px) translateY(-50px);
+  }
+  .header-tile {
+    width: 228px;
+    height: 66px;
+    font-size: 22px;
+    text-align: center;
+  }
+  #header-description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .header-image {
+    width: 100%;
+    height: 70%;
+    transform: translateY(-66px);
+  }
+  @keyframes sliding {
+    0% {
+      left: 20px;
+    }
+
+    100% {
+      left: 200px;
+    }
+  }
+  .header-image img {
+    height: 60vh;
+    position: relative;
+    animation: sliding 0.8s ease-in-out 0.3s infinite alternate;
+    animation-play-state: running;
+    transform: translateY(-17px);
+  }
+  .btn {
+    width: 161px;
+    height: 40px;
+    transform: translateX(24px);
+    /* padding-left: 20px; */
+  }
+
+  /*=============== Navigation Bar =============== */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu {
+    display: flex;
+    gap: 5px;
+    transform: translateX(-1px);
+    background-color: snow;
+    /* background-color: white; */
+  }
+  .menu-option {
+    transform: translateX(-31px);
+    width: 337px;
+    border: 1px solid gray;
+  }
+  .menu-option:hover {
+    background: #f41818;
+  }
+  /* ============== Blogs ===================*/
+  .blogs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    /* transform: translateX(-16px); */
+    padding-top: 20px;
+  }
+
+  .footer {
+    height: 100vh;
+    margin-top: 2300px;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    /* transform: translate(10px, 10px); */
+    align-items: center;
+  }
+  .footer p {
+    /* transform: translate(-142px, -89px); */
+  }
+  .footer-info {
+    flex-direction: column;
+    transform: translate(9px, -111px);
+  }
+  .footer-social-media {
+    flex-direction: column;
+  }
+}
+.Tab-button {
+  visibility: hidden;
+}
+
+/* ======================== For Tablet Devices ============*/
+
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+  .header-section {
+    width: 100%;
+  }
+  .header {
+    width: 100%;
+  }
+
+  .header-text {
+    transform: translateY(-20px);
+    width: 50%;
+  }
+  .header-tile {
+    font-size: 40px;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .navigation-bar {
+    background: none;
+  }
+  .menu {
+    display: flex;
+    background-color: snow;
+    flex-direction: row;
+    gap: 15px;
+    transform: translate(180px, -128px);
+  }
+  .menu-option {
+    transform: translateX(-31px);
+    width: 337px;
+    border: 1px solid gray;
+  }
+  .menu-option button {
+    width: 200px;
+    height: 150px;
+  }
+
+  .menu-option:hover {
+    background: #f41818;
+  }
+
+  /* ============== Blogs ===================*/
+  .blogs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    transform: translateX(-16px);
+    padding-top: 20px;
+  }
+  .Tab-button {
+    position: relative;
+    top: 140px;
+    font-size: 20px;
+    display: block;
+    left: -60px;
+    margin-top: 58px;
+    cursor: pointer;
+
+    width: 100%;
+    visibility: visible;
+    transform: translateY(930px);
+    width: 160px;
+    margin-left: 274px;
+    padding: 10px;
+
+    background-color: #dd0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .footer {
+    height: 100vh;
+    margin-top: 600px;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    align-items: center;
+  }
+  .footer p {
+    text-align: center;
+  }
+  .footer-info {
+    flex-direction: row;
+    padding: -30px;
+    height: auto;
+  }
+  .footer-info a {
+    /* margin: 20px; */
+  }
+  .footer-social-media {
+    flex-direction: row;
+  }
+}
